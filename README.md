@@ -1,2 +1,2 @@
 # Budjettilaskuri
-Javalabran harjoitustyö
+Javalabran harjoitustyö, helppokäyttöinen päiväbudjettilaskuri
