@@ -16,8 +16,11 @@ public class Laskuri {
         return (laskeSumma(tulot) - laskeSumma(menot));
     }
 
-    public double laskeBudjetti(ArrayList<Rahatapahtuma> tulot, ArrayList<Rahatapahtuma> menot, int l) {
-        return (laskeTulojenJaMenojenErotus(tulot, menot) / l);
+    public double laskeBudjetti(ArrayList<Rahatapahtuma> tulot, ArrayList<Rahatapahtuma> menot, int jakaja) {
+        if (jakaja < 0) {
+            return 0.0;
+        }
+        return (laskeTulojenJaMenojenErotus(tulot, menot) / jakaja);
     }
 
 }

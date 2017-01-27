@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class RahatapahtumaTest {
 
-    private Rahatapahtuma testiRaha;
+    Rahatapahtuma testiRaha;
 
     @Before
     public void setUp() {

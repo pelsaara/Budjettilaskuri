@@ -14,12 +14,16 @@ public class Rahatilanne {
         this.menot = new ArrayList<>();
     }
 
-    public void lisaaTulo(String n, double m) {
-        tulot.add(new Rahatapahtuma(n, m));
+    public void lisaaTulo(String nimi, double maara) {
+        if (nimi.length() < 26 && maara >= 0.0) {
+            tulot.add(new Rahatapahtuma(nimi, maara));
+        }
     }
 
-    public void lisaaMeno(String n, double m) {
-        menot.add(new Rahatapahtuma(n, m));
+    public void lisaaMeno(String nimi, double maara) {
+        if (nimi.length() < 26 && maara >= 0.0) {
+            menot.add(new Rahatapahtuma(nimi, maara));
+        }
     }
 
     public double laskeKuukausiBudjetti() {
@@ -32,6 +36,14 @@ public class Rahatilanne {
 
     public double laskePaivaBudjetti() {
         return laskuri.laskeBudjetti(tulot, menot, 30);
+    }
+
+    public double tulot() {
+        return laskuri.laskeSumma(tulot);
+    }
+
+    public double menot() {
+        return laskuri.laskeSumma(menot);
     }
 
 }
