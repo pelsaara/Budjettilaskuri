@@ -12,3 +12,9 @@ Sovellus myös graafisesti esittää, miten menot jakautuvat. Esimerkiksi ruoan 
 * Kuukausi-, viikko- ja päiväbudjetin laskenta
 * Graafisten esitysten tarkastelu
 * Budjetin tietojen tulostus
+
+# Rakenne
+
+**Määrittelyvaiheen luokkakaavio**
+
+![Määrittelyvaiheen luokkakaavio](ensimmainenLuokkakaavio.png)
