@@ -5,3 +5,4 @@ Päivä | Tunnit | Kuvaus
 20.01.2016 | 1h | Aihemäärittelyn ja tuntikirjanpidon luominen, kansiorakenteen rakentaminen
 24.01.2016 | 1h | Projektin uudelleenluonti teknisten ongelmien vuoksi
 24.01.2016 | 2h | Sovelluslogiikan ohjelmointi, luokat Rahatapahtuma, Laskuri ja Rahatilanne, ensimmäinen testi
+27.01.2016 | 4h | Testit kaikkiin olemassaoleviin luokkiin, luokkakaavio, pit- ja checkstyle-testit
