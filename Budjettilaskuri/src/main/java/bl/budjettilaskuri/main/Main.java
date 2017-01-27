@@ -1,6 +1,6 @@
-
 package bl.budjettilaskuri.main;
 
+import bl.budjettilaskuri.logiikka.Rahatapahtuma;
 import bl.budjettilaskuri.logiikka.Rahatilanne;
 
 public class Main {
@@ -15,12 +15,16 @@ public class Main {
         r.lisaaMeno("Unicafe", 60);
         r.lisaaMeno("Bussikortti", 39);
         r.lisaaMeno("puhelinlasku", 21.70);
-        
-        
-        System.out.println("Kuukauden budjetti on: " +r.laskeKuukausiBudjetti());       
+
+        System.out.println("Kuukauden budjetti on: " + r.laskeKuukausiBudjetti());
         System.out.println("Viikon budjetti on: " + r.laskeViikkoBudjetti());
-        System.out.println("Päivän budjetti on: " +r.laskePaivaBudjetti());
-        
+        System.out.println("Päivän budjetti on: " + r.laskePaivaBudjetti());
+
+        String nimi = "vuokra";
+        double maara = 850.0;
+        Rahatapahtuma raha = new Rahatapahtuma(nimi, maara);
+        System.out.println(raha);
+
     }
 
 }
