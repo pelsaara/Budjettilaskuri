@@ -7,7 +7,7 @@ Sovellus myös graafisesti esittää, miten menot jakautuvat. Esimerkiksi ruoan 
 
 **Käyttäjä:** Kuka tahansa, joka tahtoo laskea budjettinsa 
 
-** Käyttäjän toiminnot:**
+**Käyttäjän toiminnot:**
 * Menojen ja tulojen syöttäminen
 * Kuukausi-, viikko- ja päiväbudjetin laskenta
 * Graafisten esitysten tarkastelu
