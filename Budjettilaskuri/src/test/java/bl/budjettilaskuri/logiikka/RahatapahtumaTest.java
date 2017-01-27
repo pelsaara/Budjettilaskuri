@@ -1,3 +1,5 @@
+package bl.budjettilaskuri.logiikka;
+
 
 import bl.budjettilaskuri.logiikka.Rahatapahtuma;
 import org.junit.Before;

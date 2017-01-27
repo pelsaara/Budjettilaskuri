@@ -1,3 +1,5 @@
+package bl.budjettilaskuri.logiikka;
+
 
 import bl.budjettilaskuri.logiikka.Rahatilanne;
 import org.junit.Before;

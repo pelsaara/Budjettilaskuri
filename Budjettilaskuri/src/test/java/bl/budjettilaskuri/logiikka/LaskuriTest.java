@@ -1,3 +1,5 @@
+package bl.budjettilaskuri.logiikka;
+
 
 import bl.budjettilaskuri.logiikka.Laskuri;
 import bl.budjettilaskuri.logiikka.Rahatapahtuma;
