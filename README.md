@@ -5,7 +5,7 @@ Budjettilaskuri, joka laskee syötettyjen tulojen ja menojen jälkeen, kuinka pa
 
 
 ### Dokumentaatio
-- [Aiheen kuvaus](dokumentaatio/Aihemäärittely.md) 
+- [Aiheen kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md) 
 - [Tuntikirjanpito](dokumentaatio/Tuntikirjanpito.md)
 
 
