@@ -7,3 +7,4 @@ Päivä | Tunnit | Kuvaus
 24.01.2016 | 2h | Sovelluslogiikan ohjelmointi, luokat Rahatapahtuma, Laskuri ja Rahatilanne, ensimmäinen testi
 27.01.2016 | 4h | Testit kaikkiin olemassaoleviin luokkiin, luokkakaavio, pit- ja checkstyle-testit
 03.02.2017 | 4h | Käyttöliittymän ja tapahtumankuuntelijoiden rakentelua
+03.02.2017 | 2h | Tapahtumankuuntelijat valmiit nykyisessa käyttöliittymässä
