@@ -1,7 +1,9 @@
 package bl.budjettilaskuri.main;
 
+import bl.budjettilaskuri.gui.Kayttoliittyma;
 import bl.budjettilaskuri.logiikka.Rahatapahtuma;
 import bl.budjettilaskuri.logiikka.Rahatilanne;
+import javax.swing.SwingUtilities;
 
 public class Main {
 
@@ -24,6 +26,10 @@ public class Main {
         double maara = 850.0;
         Rahatapahtuma raha = new Rahatapahtuma(nimi, maara);
         System.out.println(raha);
+        
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma();
+        SwingUtilities.invokeLater(kayttoliittyma);
+
 
     }
 
