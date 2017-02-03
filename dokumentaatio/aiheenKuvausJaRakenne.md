@@ -15,6 +15,6 @@ Sovellus myös graafisesti esittää, miten menot jakautuvat. Esimerkiksi ruoan 
 
 # Rakenne
 
-**Määrittelyvaiheen luokkakaavio**
+**Luokkakaavio**
 
 ![Nykyinen luokkakaavio](toinenLuokkakaavio.png)
