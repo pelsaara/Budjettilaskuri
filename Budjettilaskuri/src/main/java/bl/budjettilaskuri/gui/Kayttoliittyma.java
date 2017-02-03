@@ -1,10 +1,13 @@
 package bl.budjettilaskuri.gui;
 
+import bl.budjettilaskuri.gui.kuuntelijat.MenonLisaysKuuntelija;
+import bl.budjettilaskuri.gui.kuuntelijat.TulonLisaysKuuntelija;
 import bl.budjettilaskuri.logiikka.Rahatilanne;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.math.RoundingMode;
 import java.text.NumberFormat;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -39,35 +42,46 @@ public class Kayttoliittyma implements Runnable {
     }
 
     private void luoKomponentit(Container container) {
-
         container.add(luoTekstiKentat());
-        container.add(luoValikko(), BorderLayout.SOUTH);
-
+        container.add(luoBudjettiValikko(), BorderLayout.SOUTH);
     }
 
     private JPanel luoTekstiKentat() {
         JPanel panel = new JPanel(new GridLayout(3, 2));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        NumberFormat f = NumberFormat.getNumberInstance();
-        JFormattedTextField summa = new JFormattedTextField(f);
+        JTextField seliteKentta = new JTextField();
+        JTextField summaKentta = new JTextField();
 
         panel.add(new JLabel("Selite: "));
-        panel.add(new JTextField());
+        panel.add(seliteKentta);
         panel.add(new JLabel("Summa: "));
-        panel.add(summa);
-        panel.add(new JButton("Lisää tulo"));
-        panel.add(new JButton("Lisää meno"));
+        panel.add(summaKentta);
 
-        summa.setColumns(10);
+        JButton tulo = new JButton("Lisää tulo");
+        tulo.addActionListener(new TulonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta));
+
+        JButton meno = new JButton("Lisää meno");
+        meno.addActionListener(new MenonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta));
+
+        panel.add(tulo);
+        panel.add(meno);
 
         return panel;
     }
 
-    private JPanel luoValikko() {
-        JPanel panel = new JPanel(new GridLayout(1, 1));
+    private JPanel luoBudjettiValikko() {
+        JPanel panel = new JPanel(new GridLayout(2, 1));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-        panel.add(new JButton("Laske budjetti"));
+
+        JButton budjettiNappi = new JButton("Laske Budjetti");
+        JTextArea tekstiKentta = new JTextArea();
+
+        budjettiNappi.addActionListener(new BudjetinLaskuKuuntelija(this.rahatilanne, tekstiKentta));
+
+        panel.add(budjettiNappi);
+        panel.add(tekstiKentta);
+
         return panel;
     }
 

@@ -8,6 +8,7 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) {
+        //Testidataa
         Rahatilanne r = new Rahatilanne();
         r.lisaaTulo("opintotuki", 504);
         r.lisaaTulo("opintolaina", 400);
@@ -26,9 +27,12 @@ public class Main {
         double maara = 850.0;
         Rahatapahtuma raha = new Rahatapahtuma(nimi, maara);
         System.out.println(raha);
-
-        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(r);
+        
+        //Graafinen käyttöliittymä
+        Rahatilanne uusi = new Rahatilanne();
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(uusi);
         SwingUtilities.invokeLater(kayttoliittyma);
+        
 
     }
 
