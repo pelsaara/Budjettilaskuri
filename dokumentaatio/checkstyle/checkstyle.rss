@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 4,
+      <title>File: 9,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -74,7 +74,77 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.Kayttoliittyma.java">bl/budjettilaskuri/gui/Kayttoliittyma.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.kuuntelijat.TulonLisaysKuuntelija.java">bl/budjettilaskuri/gui/kuuntelijat/TulonLisaysKuuntelija.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.kuuntelijat.RahatilanteenLisaysKuuntelija.java">bl/budjettilaskuri/gui/kuuntelijat/RahatilanteenLisaysKuuntelija.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.BudjetinLaskuKuuntelija.java">bl/budjettilaskuri/gui/BudjetinLaskuKuuntelija.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.logiikka.Rahatilanne.java">bl/budjettilaskuri/logiikka/Rahatilanne.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.kuuntelijat.MenonLisaysKuuntelija.java">bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.java</a>
                 </td>
                 <td>
                   0
