@@ -8,3 +8,4 @@ Päivä | Tunnit | Kuvaus
 27.01.2016 | 4h | Testit kaikkiin olemassaoleviin luokkiin, luokkakaavio, pit- ja checkstyle-testit
 03.02.2017 | 4h | Käyttöliittymän ja tapahtumankuuntelijoiden rakentelua
 03.02.2017 | 2h | Tapahtumankuuntelijat valmiit nykyisessa käyttöliittymässä
+03.02.2017 | 2h | Pit- ja Checkstyle-testausta, refaktorointia ja uusi luokkakaavio
