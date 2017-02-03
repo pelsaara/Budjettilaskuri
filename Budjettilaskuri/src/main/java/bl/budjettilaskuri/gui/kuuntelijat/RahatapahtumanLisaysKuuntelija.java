@@ -4,17 +4,15 @@ import bl.budjettilaskuri.logiikka.Rahatapahtuma;
 import bl.budjettilaskuri.logiikka.Rahatilanne;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Currency;
-import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 
-public abstract class RahatilanteenLisaysKuuntelija implements ActionListener {
+public abstract class RahatapahtumanLisaysKuuntelija implements ActionListener {
 
     Rahatilanne rahatilanne;
     JTextField seliteKentta;
     JTextField summaKentta;
 
-    public RahatilanteenLisaysKuuntelija(Rahatilanne rahatilanne, JTextField seliteKentta, JTextField summaKentta) {
+    public RahatapahtumanLisaysKuuntelija(Rahatilanne rahatilanne, JTextField seliteKentta, JTextField summaKentta) {
         this.rahatilanne = rahatilanne;
         this.seliteKentta = seliteKentta;
         this.summaKentta = summaKentta;
@@ -29,7 +27,6 @@ public abstract class RahatilanteenLisaysKuuntelija implements ActionListener {
             System.out.println(e.getMessage());
         }
 
-        Rahatapahtuma rahatapahtuma = new Rahatapahtuma(seliteKentta.getText(), summa);
     }
 
 }

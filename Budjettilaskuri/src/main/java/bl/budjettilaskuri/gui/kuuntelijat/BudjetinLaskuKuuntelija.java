@@ -1,10 +1,10 @@
-package bl.budjettilaskuri.gui;
+package bl.budjettilaskuri.gui.kuuntelijat;
 
 import bl.budjettilaskuri.logiikka.Rahatilanne;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
+
 
 public class BudjetinLaskuKuuntelija implements ActionListener {
 

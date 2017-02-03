@@ -14,15 +14,15 @@ public class Rahatilanne {
         this.menot = new ArrayList<>();
     }
 
-    public void lisaaTulo(String nimi, double maara) {
-        if (nimi.length() < 26 && maara >= 0.0) {
-            tulot.add(new Rahatapahtuma(nimi, maara));
+    public void lisaaTulo(String selite, double maara) {
+        if (selite.length() < 26 && maara >= 0.0) {
+            tulot.add(new Rahatapahtuma(selite, maara));
         }
     }
 
-    public void lisaaMeno(String nimi, double maara) {
-        if (nimi.length() < 26 && maara >= 0.0) {
-            menot.add(new Rahatapahtuma(nimi, maara));
+    public void lisaaMeno(String selite, double maara) {
+        if (selite.length() < 26 && maara >= 0.0) {
+            menot.add(new Rahatapahtuma(selite, maara));
         }
     }
 

@@ -1,13 +1,10 @@
 package bl.budjettilaskuri.gui.kuuntelijat;
 
-import bl.budjettilaskuri.gui.kuuntelijat.RahatilanteenLisaysKuuntelija;
-import bl.budjettilaskuri.logiikka.Rahatapahtuma;
 import bl.budjettilaskuri.logiikka.Rahatilanne;
 import java.awt.event.ActionEvent;
-import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 
-public class TulonLisaysKuuntelija extends RahatilanteenLisaysKuuntelija {
+public class TulonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
 
     public TulonLisaysKuuntelija(Rahatilanne rahatilanne, JTextField seliteKentta, JTextField summaKentta) {
         super(rahatilanne, seliteKentta, summaKentta);

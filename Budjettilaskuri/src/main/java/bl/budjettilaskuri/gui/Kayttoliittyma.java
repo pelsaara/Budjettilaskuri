@@ -1,5 +1,6 @@
 package bl.budjettilaskuri.gui;
 
+import bl.budjettilaskuri.gui.kuuntelijat.BudjetinLaskuKuuntelija;
 import bl.budjettilaskuri.gui.kuuntelijat.MenonLisaysKuuntelija;
 import bl.budjettilaskuri.gui.kuuntelijat.TulonLisaysKuuntelija;
 import bl.budjettilaskuri.logiikka.Rahatilanne;
