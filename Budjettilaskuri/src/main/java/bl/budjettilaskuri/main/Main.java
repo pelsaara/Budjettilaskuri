@@ -26,10 +26,9 @@ public class Main {
         double maara = 850.0;
         Rahatapahtuma raha = new Rahatapahtuma(nimi, maara);
         System.out.println(raha);
-        
-        Kayttoliittyma kayttoliittyma = new Kayttoliittyma();
-        SwingUtilities.invokeLater(kayttoliittyma);
 
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(r);
+        SwingUtilities.invokeLater(kayttoliittyma);
 
     }
 

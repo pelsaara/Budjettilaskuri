@@ -1,10 +1,14 @@
 package bl.budjettilaskuri.gui;
 
+import bl.budjettilaskuri.logiikka.Rahatilanne;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.text.NumberFormat;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -15,8 +19,10 @@ import javax.swing.WindowConstants;
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
+    private Rahatilanne rahatilanne;
 
-    public Kayttoliittyma() {
+    public Kayttoliittyma(Rahatilanne rahatilanne) {
+        this.rahatilanne = rahatilanne;
     }
 
     @Override
@@ -32,26 +38,35 @@ public class Kayttoliittyma implements Runnable {
         frame.setVisible(true);
     }
 
-    private void luoKomponentit(Container container) {       
+    private void luoKomponentit(Container container) {
+
         container.add(luoTekstiKentat());
         container.add(luoValikko(), BorderLayout.SOUTH);
 
-        
     }
 
     private JPanel luoTekstiKentat() {
         JPanel panel = new JPanel(new GridLayout(3, 2));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        NumberFormat f = NumberFormat.getNumberInstance();
+        JFormattedTextField summa = new JFormattedTextField(f);
+
         panel.add(new JLabel("Selite: "));
         panel.add(new JTextField());
         panel.add(new JLabel("Summa: "));
-        panel.add(new JTextField());
+        panel.add(summa);
         panel.add(new JButton("Lisää tulo"));
         panel.add(new JButton("Lisää meno"));
+
+        summa.setColumns(10);
+
         return panel;
     }
 
     private JPanel luoValikko() {
-        JPanel panel = new JPanel(new GridLayout(1, 3));
+        JPanel panel = new JPanel(new GridLayout(1, 1));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         panel.add(new JButton("Laske budjetti"));
         return panel;
     }
