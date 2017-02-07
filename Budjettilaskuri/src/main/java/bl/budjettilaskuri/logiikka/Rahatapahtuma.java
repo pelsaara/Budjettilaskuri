@@ -1,5 +1,8 @@
 package bl.budjettilaskuri.logiikka;
 
+/**
+ * Luokka kuvaa rahatapahtuma-oliota, jolla on rahatapahtuman määrä ja selite.
+ */
 public class Rahatapahtuma {
 
     private String selite;
@@ -34,6 +37,11 @@ public class Rahatapahtuma {
         }
     }
 
+    /**
+     * Metodi palauttaa olion String-muodon
+     *
+     * @return String, joka sisältää selitteen ja määrän
+     */
     @Override
     public String toString() {
         return (selite + ": " + maara);
