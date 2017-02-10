@@ -24,8 +24,8 @@ public class Rahatilanne {
      * @param selite Käyttäjän antama selite tulolle
      * @param maara Käyttäjän antama summa tulolle
      */
-    public void lisaaTulo(String selite, double maara) {
-        if (selite.length() < 26 && maara >= 0.0) {
+    public void lisaaTulo(String selite, int maara) {
+        if (selite.length() < 26 && maara >= 0) {
             tulot.add(new Rahatapahtuma(selite, maara));
         }
     }
@@ -36,8 +36,8 @@ public class Rahatilanne {
      * @param selite Käyttäjän antama selite tulolle
      * @param maara Käyttäjän antama summa tulolle
      */
-    public void lisaaMeno(String selite, double maara) {
-        if (selite.length() < 26 && maara >= 0.0) {
+    public void lisaaMeno(String selite, int maara) {
+        if (selite.length() < 26 && maara >= 0) {
             menot.add(new Rahatapahtuma(selite, maara));
         }
     }
@@ -74,7 +74,7 @@ public class Rahatilanne {
      *
      * @return tulojen summa
      */
-    public double tulot() {
+    public int tulot() {
         return laskuri.laskeSumma(tulot);
     }
 
@@ -83,8 +83,16 @@ public class Rahatilanne {
      *
      * @return menojen summa
      */
-    public double menot() {
+    public int menot() {
         return laskuri.laskeSumma(menot);
+    }
+
+    public ArrayList<Rahatapahtuma> getTulot() {
+        return tulot;
+    }
+
+    public ArrayList<Rahatapahtuma> getMenot() {
+        return menot;
     }
 
 }

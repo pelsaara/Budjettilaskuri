@@ -1,14 +1,14 @@
 package bl.budjettilaskuri.logiikka;
 
 /**
- * Luokka kuvaa rahatapahtuma-oliota, jolla on rahatapahtuman määrä ja selite.
+ * Luokka kuvaa rahatapahtuma-oliota, jolla on (euro)määrä ja selite.
  */
 public class Rahatapahtuma {
 
     private String selite;
-    private double maara;
+    private int maara;
 
-    public Rahatapahtuma(String selite, double maara) {
+    public Rahatapahtuma(String selite, int maara) {
         if (maara >= 0) {
             this.maara = maara;
         }
@@ -17,11 +17,11 @@ public class Rahatapahtuma {
         }
     }
 
-    public double getMaara() {
+    public int getMaara() {
         return maara;
     }
 
-    public void setMaara(double maara) {
+    public void setMaara(int maara) {
         if (maara >= 0) {
             this.maara = maara;
         }

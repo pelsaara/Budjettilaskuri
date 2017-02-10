@@ -1,7 +1,5 @@
 package bl.budjettilaskuri.logiikka;
 
-
-import bl.budjettilaskuri.logiikka.Rahatilanne;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -17,28 +15,28 @@ public class RahatilanneTest {
 
     @Test
     public void lisaaTuloToimii() {
-        tilanne.lisaaTulo("palkka", 800.0);
-        assertEquals(800.0, tilanne.tulot(), 0.005);
+        tilanne.lisaaTulo("palkka", 800);
+        assertEquals(800, tilanne.tulot());
     }
 
     @Test
     public void lisaaTuloEiToimiVaarillaSyotteilla() {
-        tilanne.lisaaTulo("palkka", (-800.0));
-        tilanne.lisaaTulo("palkkajatukijalainajaelaritjaosingot", (800.0));
-        assertEquals(0.0, tilanne.tulot(), 0.005);
+        tilanne.lisaaTulo("palkka", (-800));
+        tilanne.lisaaTulo("palkkajatukijalainajaelaritjaosingot", (800));
+        assertEquals(0, tilanne.tulot());
     }
 
     @Test
     public void lisaaMenoToimii() {
-        tilanne.lisaaMeno("vuokra", 425.0);
-        assertEquals(425.0, tilanne.menot(), 0.005);
+        tilanne.lisaaMeno("vuokra", 425);
+        assertEquals(425, tilanne.menot());
     }
 
     @Test
     public void lisaaMenoEiToimiVaarillaSyotteilla() {
-        tilanne.lisaaMeno("vuokra", (-660.0));
-        tilanne.lisaaMeno("vuokraruokasähkövakuutukset", 700.0);
-        assertEquals(0.0, tilanne.menot(), 0.005);
+        tilanne.lisaaMeno("vuokra", (-660));
+        tilanne.lisaaMeno("vuokraruokasähkövakuutukset", 700);
+        assertEquals(0, tilanne.menot());
     }
 
     @Test

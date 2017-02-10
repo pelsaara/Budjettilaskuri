@@ -14,8 +14,8 @@ public class Laskuri {
      * Rahatapahtumien määrät yhteen
      * @return Rahatapahtumien yhteenlaskettu summa
      */
-    public double laskeSumma(ArrayList<Rahatapahtuma> rahat) {
-        double summa = 0.0;
+    public int laskeSumma(ArrayList<Rahatapahtuma> rahat) {
+        int summa = 0;
         for (int i = 0; i < rahat.size(); i++) {
             summa += rahat.get(i).getMaara();
         }
@@ -32,7 +32,7 @@ public class Laskuri {
      *
      * @return Tulojen ja menojen erotus
      */
-    public double laskeTulojenJaMenojenErotus(ArrayList<Rahatapahtuma> tulot, ArrayList<Rahatapahtuma> menot) {
+    public int laskeTulojenJaMenojenErotus(ArrayList<Rahatapahtuma> tulot, ArrayList<Rahatapahtuma> menot) {
         return (laskeSumma(tulot) - laskeSumma(menot));
     }
 
@@ -52,7 +52,7 @@ public class Laskuri {
         if (jakaja < 0) {
             return 0.0;
         }
-        return (laskeTulojenJaMenojenErotus(tulot, menot) / jakaja);
+        return (laskeTulojenJaMenojenErotus(tulot, menot) / (double)jakaja);
     }
 
 }

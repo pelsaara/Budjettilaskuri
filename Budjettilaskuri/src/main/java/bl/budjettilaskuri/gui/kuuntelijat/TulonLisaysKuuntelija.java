@@ -12,13 +12,16 @@ public class TulonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        double summa = 0.0;
+        int summa = 0;
         try {
-            summa = Double.parseDouble(summaKentta.getText());
+            summa = Integer.parseInt(summaKentta.getText());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        rahatilanne.lisaaTulo(seliteKentta.getText(), summa);
+        if (summa != 0) {
+            rahatilanne.lisaaTulo(seliteKentta.getText(), summa);
+        } 
+        
     }
 
 }

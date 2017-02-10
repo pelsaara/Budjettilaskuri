@@ -1,8 +1,6 @@
 package bl.budjettilaskuri.logiikka;
 
 
-import bl.budjettilaskuri.logiikka.Laskuri;
-import bl.budjettilaskuri.logiikka.Rahatapahtuma;
 import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,22 +29,22 @@ public class LaskuriTest {
         ArrayList<Rahatapahtuma> testi = new ArrayList<>();
         testi.add(new Rahatapahtuma("eka", 1));
         testi.add(new Rahatapahtuma("toka", 2));
-        assertEquals(3.0, laskuri.laskeSumma(testi), 0.005);
+        assertEquals(3, laskuri.laskeSumma(testi), 0.005);
     }
 
     @Test
     public void laskeTulojenJaMenojenErotusToimii() {
-        assertEquals(20.0, laskuri.laskeTulojenJaMenojenErotus(tulot, menot), 0.005);
+        assertEquals(20, laskuri.laskeTulojenJaMenojenErotus(tulot, menot), 0.005);
     }
 
     @Test
     public void laskeBudjettiToimii() {
-        assertEquals(4.0, laskuri.laskeBudjetti(tulot, menot, 5), 0.005);
+        assertEquals(4, laskuri.laskeBudjetti(tulot, menot, 5), 0.005);
     }
 
     @Test
     public void laskeBudjettiPalauttaaNollaJosJakajaNegatiivinen() {
-        assertEquals(0.0, laskuri.laskeBudjetti(tulot, menot, (-5)), 0.005);
+        assertEquals(0, laskuri.laskeBudjetti(tulot, menot, (-5)), 0.005);
     }
 
 }
