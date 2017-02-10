@@ -8,28 +8,28 @@
 <div id="overview"><a href="../../../../../apidocs/bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">View Javadoc</a></div><pre>
 <a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> bl.budjettilaskuri.gui.kuuntelijat;
 <a class="jxr_linenumber" name="L2" href="#L2">2</a>   
-<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> bl.budjettilaskuri.gui.kuuntelijat.RahatilanteenLisaysKuuntelija;
-<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> bl.budjettilaskuri.logiikka.Rahatapahtuma;
-<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> bl.budjettilaskuri.logiikka.Rahatilanne;
-<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> java.awt.event.ActionEvent;
-<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> javax.swing.JFormattedTextField;
-<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> javax.swing.JTextField;
-<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
-<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">MenonLisaysKuuntelija</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/RahatilanteenLisaysKuuntelija.html">RahatilanteenLisaysKuuntelija</a> {
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
-<a class="jxr_linenumber" name="L12" href="#L12">12</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">MenonLisaysKuuntelija</a>(<a href="../../../../bl/budjettilaskuri/logiikka/Rahatilanne.html">Rahatilanne</a> rahatilanne, JTextField seliteKentta, JTextField summaKentta) {
-<a class="jxr_linenumber" name="L13" href="#L13">13</a>          <strong class="jxr_keyword">super</strong>(rahatilanne, seliteKentta, summaKentta);
-<a class="jxr_linenumber" name="L14" href="#L14">14</a>      }
-<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
-<a class="jxr_linenumber" name="L16" href="#L16">16</a>      @Override
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(ActionEvent ae) {
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>          <strong class="jxr_keyword">double</strong> summa = 0.0;
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>              summa = Double.parseDouble(summaKentta.getText());
-<a class="jxr_linenumber" name="L21" href="#L21">21</a>          } <strong class="jxr_keyword">catch</strong> (Exception e) {
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>              System.out.println(e.getMessage());
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> bl.budjettilaskuri.logiikka.Rahatilanne;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> java.awt.event.ActionEvent;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> javax.swing.JTextField;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">MenonLisaysKuuntelija</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/RahatapahtumanLisaysKuuntelija.html">RahatapahtumanLisaysKuuntelija</a> {
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">MenonLisaysKuuntelija</a>(<a href="../../../../bl/budjettilaskuri/logiikka/Rahatilanne.html">Rahatilanne</a> rahatilanne, JTextField seliteKentta, JTextField summaKentta) {
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>          <strong class="jxr_keyword">super</strong>(rahatilanne, seliteKentta, summaKentta);
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>      }
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>      @Override
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(ActionEvent ae) {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          <strong class="jxr_keyword">int</strong> summa = 0;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>          <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>              summa = Integer.parseInt(summaKentta.getText());
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          } <strong class="jxr_keyword">catch</strong> (Exception e) {
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>              System.out.println(e.getMessage());
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          }
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <strong class="jxr_keyword">if</strong> (summa != 0) {
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>              rahatilanne.lisaaMeno(seliteKentta.getText(), summa);
 <a class="jxr_linenumber" name="L23" href="#L23">23</a>          }
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>          rahatilanne.lisaaMeno(seliteKentta.getText(), summa);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
 <a class="jxr_linenumber" name="L25" href="#L25">25</a>      }
 <a class="jxr_linenumber" name="L26" href="#L26">26</a>  
 <a class="jxr_linenumber" name="L27" href="#L27">27</a>  }

@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 9,
+      <title>File: 10,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -47,6 +47,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.logiikka.Rahatapahtuma.java">bl/budjettilaskuri/logiikka/Rahatapahtuma.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.kuuntelijat.BudjetinLaskuKuuntelija.java">bl/budjettilaskuri/gui/kuuntelijat/BudjetinLaskuKuuntelija.java</a>
                 </td>
                 <td>
                   0
@@ -102,34 +116,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.kuuntelijat.RahatilanteenLisaysKuuntelija.java">bl/budjettilaskuri/gui/kuuntelijat/RahatilanteenLisaysKuuntelija.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.BudjetinLaskuKuuntelija.java">bl/budjettilaskuri/gui/BudjetinLaskuKuuntelija.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.logiikka.Rahatilanne.java">bl/budjettilaskuri/logiikka/Rahatilanne.java</a>
                 </td>
                 <td>
@@ -144,7 +130,35 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.kuuntelijat.RahatapahtumanLisaysKuuntelija.java">bl/budjettilaskuri/gui/kuuntelijat/RahatapahtumanLisaysKuuntelija.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.gui.kuuntelijat.MenonLisaysKuuntelija.java">bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#bl.budjettilaskuri.logiikka.Tulostin.java">bl/budjettilaskuri/logiikka/Tulostin.java</a>
                 </td>
                 <td>
                   0
