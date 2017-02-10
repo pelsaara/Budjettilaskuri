@@ -10,3 +10,5 @@ Päivä | Tunnit | Kuvaus
 03.02.2017 | 2h | Tapahtumankuuntelijat valmiit nykyisessa käyttöliittymässä
 03.02.2017 | 2h | Pit- ja Checkstyle-testausta, refaktorointia ja uusi luokkakaavio
 07.02.2017 | 2h | JavaDoc kaikille nykyisille luokille ja metodeille
+10.02.2017 | 2h | Määrä-muuttuja doublesta intiksi, uusi luokka Tulostin
+10.02.2017 | 2h | Tulostin-luokka ja testit valmiiksi, raporttien päivitys
