@@ -52,7 +52,7 @@ public class Laskuri {
         if (jakaja < 0) {
             return 0.0;
         }
-        return (laskeTulojenJaMenojenErotus(tulot, menot) / (double)jakaja);
+        return (laskeTulojenJaMenojenErotus(tulot, menot) / (double) jakaja);
     }
 
 }

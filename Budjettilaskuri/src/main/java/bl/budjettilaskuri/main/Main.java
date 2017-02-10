@@ -25,7 +25,7 @@ public class Main {
         System.out.println("Päivän budjetti on: " + r.laskePaivaBudjetti());
         System.out.println("");
         Tulostin tulostin = new Tulostin();
-        tulostin.tulostaRahatilanne(r);
+        System.out.println(tulostin.tulostaRahatilanne(r));
         System.out.println("");
 
         String nimi = "vuokra";

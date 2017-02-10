@@ -20,8 +20,8 @@ public class TulonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
         }
         if (summa != 0) {
             rahatilanne.lisaaTulo(seliteKentta.getText(), summa);
-        } 
-        
+        }
+
     }
 
 }

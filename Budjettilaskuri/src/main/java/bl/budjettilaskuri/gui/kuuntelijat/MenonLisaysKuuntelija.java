@@ -18,10 +18,10 @@ public class MenonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        if (summa != 0){
+        if (summa != 0) {
             rahatilanne.lisaaMeno(seliteKentta.getText(), summa);
         }
-        
+
     }
 
 }
