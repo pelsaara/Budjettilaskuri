@@ -14,3 +14,4 @@ Päivä | Tunnit | Kuvaus
 10.02.2017 | 2h | Tulostin-luokka ja testit valmiiksi, raporttien päivitys
 14.02.2017 | 1h | Checkstylen laajennus JavaDociin, korjauksia virheisiin
 14.02.2017 | 2h | Jatkokehitystä, Tulostin-luokka käyttöön käyttöliittymään
+14.02.2017 | 1h | Hienosäätöä, PDF-kirjastoihin tutustumista
