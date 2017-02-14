@@ -4,6 +4,7 @@ import bl.budjettilaskuri.gui.kuuntelijat.BudjetinLaskuKuuntelija;
 import bl.budjettilaskuri.gui.kuuntelijat.MenonLisaysKuuntelija;
 import bl.budjettilaskuri.gui.kuuntelijat.TulonLisaysKuuntelija;
 import bl.budjettilaskuri.logiikka.Rahatilanne;
+import bl.budjettilaskuri.logiikka.Tulostin;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -21,9 +22,11 @@ public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
     private Rahatilanne rahatilanne;
+    private Tulostin tulostin;
 
     public Kayttoliittyma(Rahatilanne rahatilanne) {
         this.rahatilanne = rahatilanne;
+        this.tulostin = new Tulostin();
     }
 
     @Override
@@ -45,7 +48,7 @@ public class Kayttoliittyma implements Runnable {
     }
 
     private JPanel luoTekstiKentat() {
-        JPanel panel = new JPanel(new GridLayout(3, 2));
+        JPanel panel = new JPanel(new GridLayout(4, 2));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         JTextField seliteKentta = new JTextField();
@@ -55,15 +58,21 @@ public class Kayttoliittyma implements Runnable {
         panel.add(seliteKentta);
         panel.add(new JLabel("Summa: "));
         panel.add(summaKentta);
+        JTextArea tulot = new JTextArea();
+        JTextArea menot = new JTextArea();
 
         JButton tulo = new JButton("Lisää tulo");
-        tulo.addActionListener(new TulonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta));
+        tulo.addActionListener(new TulonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta, tulot));
 
         JButton meno = new JButton("Lisää meno");
-        meno.addActionListener(new MenonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta));
+        meno.addActionListener(new MenonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta, menot));
+        
 
         panel.add(tulo);
         panel.add(meno);
+        
+        panel.add(tulot);
+        panel.add(menot);
 
         return panel;
     }
