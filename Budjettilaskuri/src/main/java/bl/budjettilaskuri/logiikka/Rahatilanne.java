@@ -70,7 +70,7 @@ public class Rahatilanne {
     }
 
     /**
-     * Metodi palauttaa tulojen summan
+     * Metodi palauttaa tulojen summan.
      *
      * @return tulojen summa
      */
@@ -79,7 +79,7 @@ public class Rahatilanne {
     }
 
     /**
-     * Metodi palauttaa menojen summan
+     * Metodi palauttaa menojen summan.
      *
      * @return menojen summa
      */

@@ -38,7 +38,7 @@ public class Rahatapahtuma {
     }
 
     /**
-     * Metodi palauttaa olion String-muodon
+     * Metodi palauttaa olion String-muodon.
      *
      * @return String, joka sisältää selitteen ja määrän
      */
