@@ -28,4 +28,11 @@ public class TulostinTest {
         String tuloste = "Tulot: \ntuki: 500\n\nMenot: \nvuokra: 800\n";
         assertEquals(tuloste, tulostin.tulostaRahatilanne(tilanne));
     }
+    
+    @Test 
+    public void tulostaBudjettiToimii() {
+        tilanne.lisaaTulo("palkka", 600);
+        String tuloste = "Kuukausibudjetti: 300,00\nViikkobudjetti: 75,00\nPäiväbudjetti: 10,00";
+        assertEquals(tuloste, tulostin.tulostaBudjetti(tilanne));
+    }
 }

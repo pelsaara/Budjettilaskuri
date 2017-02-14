@@ -40,4 +40,20 @@ public class Tulostin {
         tulostus += tulostaLista(rt.getMenot());
         return tulostus;
     }
+
+    /**
+     * Metodi lisää lasketut budjetit String-muuttujaan.
+     *
+     * @param rt Rahatilanne, jonka tulo- ja menolistat muutetaan tulostettavaan
+     * muotoon
+     *
+     * @return Budjettilaskut sisältävä tulostettava String
+     */
+    public String tulostaBudjetti(Rahatilanne rt) {
+        String tulostus = "";
+        tulostus += ("Kuukausibudjetti: " + String.format("%.2f", rt.laskeKuukausiBudjetti()));
+        tulostus += ("\nViikkobudjetti: " + String.format("%.2f", rt.laskeViikkoBudjetti()));
+        tulostus += ("\nPäiväbudjetti: " + String.format("%.2f", rt.laskePaivaBudjetti()));
+        return tulostus;
+    }
 }
