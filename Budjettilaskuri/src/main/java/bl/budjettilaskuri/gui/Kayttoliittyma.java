@@ -66,7 +66,6 @@ public class Kayttoliittyma implements Runnable {
 
         JButton meno = new JButton("Lisää meno");
         meno.addActionListener(new MenonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta, menot));
-        
 
         panel.add(tulo);
         panel.add(meno);
@@ -74,6 +73,16 @@ public class Kayttoliittyma implements Runnable {
         panel.add(tulot);
         panel.add(menot);
 
+        return panel;
+    }
+    
+    private JPanel BudjetinTulostus(){
+        JPanel panel = new JPanel(new GridLayout(1,2));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        JTextArea tulot = new JTextArea();
+        JTextArea menot = new JTextArea();
+        panel.add(tulot);
+        panel.add(menot);
         return panel;
     }
 

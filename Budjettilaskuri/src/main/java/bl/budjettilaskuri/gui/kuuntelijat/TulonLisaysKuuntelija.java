@@ -7,11 +7,11 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class TulonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
-    
+
     public TulonLisaysKuuntelija(Rahatilanne rahatilanne, JTextField seliteKentta, JTextField summaKentta, JTextArea tapahtumaKentta) {
         super(rahatilanne, seliteKentta, summaKentta, tapahtumaKentta);
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
         int summa = 0;
@@ -22,14 +22,15 @@ public class TulonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        if (summa >= 0 && selite.length() <= 26) {
+
+        if (summa > 0 && selite.length() <= 26 && selite.length() > 0) {
             rahatilanne.lisaaTulo(seliteKentta.getText(), summa);
-            seliteKentta.setText(null);
-            summaKentta.setText(null);
+            seliteKentta.setText("");
+            summaKentta.setText("");
             Tulostin tulostin = new Tulostin();
             tapahtumaKentta.setText("Tulot: \n" + tulostin.tulostaLista(rahatilanne.getTulot()));
         }
-        
+
     }
-    
+
 }

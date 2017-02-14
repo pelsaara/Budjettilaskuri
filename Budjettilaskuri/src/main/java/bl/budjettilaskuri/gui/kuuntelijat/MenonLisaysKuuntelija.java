@@ -22,14 +22,14 @@ public class MenonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        if (summa >= 0 && selite.length()<=26) {
+        if (summa > 0 && selite.length() <= 26 && selite.length() > 0) {
             rahatilanne.lisaaMeno(seliteKentta.getText(), summa);
             seliteKentta.setText("");
             summaKentta.setText("");
-            tapahtumaKentta.setText("Menot: \n" );
+            tapahtumaKentta.setText("Menot: \n");
             Tulostin tulostin = new Tulostin();
             tapahtumaKentta.setText("Menot: \n" + tulostin.tulostaLista(rahatilanne.getMenot()));
-        } 
+        }
 
     }
 
