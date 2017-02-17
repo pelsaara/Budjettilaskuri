@@ -14,7 +14,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
@@ -61,8 +60,6 @@ public class Kayttoliittyma implements Runnable {
         panel.add(summaKentta);
         JTextArea tulot = new JTextArea();
         JTextArea menot = new JTextArea();
-        JScrollPane scr = new JScrollPane(tulot);
-        panel.add(scr);
 
         JButton tulo = new JButton("Lisää tulo");
         tulo.addActionListener(new TulonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta, tulot, tulostin));

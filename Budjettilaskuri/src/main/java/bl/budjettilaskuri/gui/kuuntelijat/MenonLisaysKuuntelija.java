@@ -22,6 +22,7 @@ public class MenonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        
         if (summa > 0 && selite.length() <= 26 && selite.length() > 0) {
             rahatilanne.lisaaMeno(seliteKentta.getText(), summa);
             seliteKentta.setText("");

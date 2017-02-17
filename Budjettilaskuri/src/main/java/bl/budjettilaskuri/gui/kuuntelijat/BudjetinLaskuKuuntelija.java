@@ -21,7 +21,6 @@ public class BudjetinLaskuKuuntelija implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Tulostin tulostin = new Tulostin();
         this.tekstiKentta.setText(tulostin.tulostaBudjetti(rahatilanne));
         
 
