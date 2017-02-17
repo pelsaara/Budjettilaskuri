@@ -18,3 +18,13 @@ Sovellus myös graafisesti esittää, miten menot jakautuvat. Esimerkiksi ruoan 
 **Luokkakaavio**
 
 ![Nykyinen luokkakaavio](kolmasLuokkakaavio.png)
+
+**Sekvenssikaaviot:**
+
+![Tulon lisäys](tulonLisays.png)
+
+
+![Menon lisäys](menonLisays.png)
+
+
+![Budjetin tulostus](budjetinTulostus.png)
