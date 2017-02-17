@@ -11,10 +11,12 @@ public class BudjetinLaskuKuuntelija implements ActionListener {
 
     private Rahatilanne rahatilanne;
     private JTextArea tekstiKentta;
+    private Tulostin tulostin;
 
-    public BudjetinLaskuKuuntelija(Rahatilanne rahatilanne, JTextArea tekstikentta) {
+    public BudjetinLaskuKuuntelija(Rahatilanne rahatilanne, JTextArea tekstikentta, Tulostin tulostin) {
         this.rahatilanne = rahatilanne;
         this.tekstiKentta = tekstikentta;
+        this.tulostin = tulostin;
     }
 
     @Override

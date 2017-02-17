@@ -2,6 +2,7 @@ package bl.budjettilaskuri.gui.kuuntelijat;
 
 import bl.budjettilaskuri.logiikka.Rahatapahtuma;
 import bl.budjettilaskuri.logiikka.Rahatilanne;
+import bl.budjettilaskuri.logiikka.Tulostin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
@@ -13,12 +14,15 @@ public abstract class RahatapahtumanLisaysKuuntelija implements ActionListener {
     JTextField seliteKentta;
     JTextField summaKentta;
     JTextArea tapahtumaKentta;
+    Tulostin tulostin;
 
-    public RahatapahtumanLisaysKuuntelija(Rahatilanne rahatilanne, JTextField seliteKentta, JTextField summaKentta, JTextArea tapahtumaKentta) {
+    public RahatapahtumanLisaysKuuntelija(Rahatilanne rahatilanne, JTextField seliteKentta, JTextField summaKentta, JTextArea tapahtumaKentta, Tulostin tulostin) {
         this.rahatilanne = rahatilanne;
         this.seliteKentta = seliteKentta;
         this.summaKentta = summaKentta;
         this.tapahtumaKentta = tapahtumaKentta;
+        this.tulostin = tulostin;
+        
     }
 
     @Override

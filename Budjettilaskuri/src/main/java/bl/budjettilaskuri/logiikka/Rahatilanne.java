@@ -12,6 +12,11 @@ public class Rahatilanne {
     private ArrayList<Rahatapahtuma> tulot;
     private ArrayList<Rahatapahtuma> menot;
 
+    /**
+     * Konstruktori luo luokka-oliolle uuden laskurin, sekä kaksi
+     * ArrayListiä:tulot ja menot.
+     *
+     */
     public Rahatilanne() {
         this.laskuri = new Laskuri();
         this.tulot = new ArrayList<>();

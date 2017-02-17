@@ -8,8 +8,8 @@ import javax.swing.JTextField;
 
 public class MenonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
 
-    public MenonLisaysKuuntelija(Rahatilanne rahatilanne, JTextField seliteKentta, JTextField summaKentta, JTextArea tapahtumaKentta) {
-        super(rahatilanne, seliteKentta, summaKentta, tapahtumaKentta);
+    public MenonLisaysKuuntelija(Rahatilanne rahatilanne, JTextField seliteKentta, JTextField summaKentta, JTextArea tapahtumaKentta, Tulostin tulostin) {
+        super(rahatilanne, seliteKentta, summaKentta, tapahtumaKentta, tulostin);
     }
 
     @Override
@@ -26,8 +26,6 @@ public class MenonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
             rahatilanne.lisaaMeno(seliteKentta.getText(), summa);
             seliteKentta.setText("");
             summaKentta.setText("");
-            tapahtumaKentta.setText("Menot: \n");
-            Tulostin tulostin = new Tulostin();
             tapahtumaKentta.setText("Menot: \n" + tulostin.tulostaLista(rahatilanne.getMenot()));
         }
 
