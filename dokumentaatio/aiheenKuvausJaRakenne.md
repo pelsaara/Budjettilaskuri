@@ -23,7 +23,7 @@ Ohjelma rakentuu kolmeen pakettiin: budjetti, logiikka ja gui. Gui-paketti sisä
 
 **Luokkakaavio**
 
-![Nykyinen luokkakaavio](neljasLuokkakaavio.png)
+![Nykyinen luokkakaavio](viidesLuokkakaavio.png)
 
 **Sekvenssikaaviot:**
 
