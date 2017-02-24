@@ -15,11 +15,13 @@ Sovellus myös tarjoaa mahdollisuuden tallentaa budjettilaskemat tiedostoon ja t
 # Rakenne
 **Rakennekuvaus** 
 
-Ohjelma rakentuu kolmeen pakettiin: budjetti, logiikka ja gui. Gui-paketti sisältää graafisen käyttöliittymän. Lisäksi gui-paketin alla on paketti gui.kuuntelijat, joka sisältää graafisen käyttöliittymän eri JButtonien ActionListenerit. Luotaessaan graafinen käyttöliittymä tarvitsee parametrikseen Rahatilanteen. 
+Ohjelma rakentuu neljään pakettiin: budjetti, logiikka, main ja gui. Gui-paketti sisältää graafisen käyttöliittymän. Lisäksi gui-paketin alla on paketti gui.kuuntelijat, joka sisältää graafisen käyttöliittymän eri JButtonien ActionListenerit. Luotaessaan graafinen käyttöliittymä tarvitsee parametrikseen Rahatilanteen. 
 
   Rahatilanne sijaistee budjetti-paketissa. Rahatilanteella on Laskuri, jonka lisäksi Rahatilanteeseen liittyy nollasta useaan Rahatapahtumaa. Rahatapahtumat talletetaan Rahatilanteessa kahteen ArrayListiin, tuloihin ja menoihin. Rahatapahtuma sisältyy myös budjetti-pakettiin. Rahatapahtumalla on string-muotoinen selite ja int-muotoinen määrä. 
   
   Logiikka-pakettiin sisältyvät jo aiemmin mainittu Laskuri, TiedostoTulostin ja Tulostin. Graafisella käyttöliittymällä on Tulostin, jota se antaa kuuntelijoilleen. Käytettäessä Tulostimelle annetaan Rahatilanne, jota Tulostin käyttää tulostaessaan Rahatilanteen eri komponentteja. Käyttöliittymä käyttää myös TiedostoTulostin-luokkaa, joka saa metodinsa parametrina sekä Tulostin-olion, että Rahatilanteen. 
+  
+  Main-paketti sisältää Main-luokan, jolla ohjelma ajetaan. 
 
 **Luokkakaavio**
 
