@@ -10,5 +10,6 @@
     <suppress files="RahatapahtumanLisaysKuuntelija.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="MenonLisaysKuuntelija.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="TulonLisaysKuuntelija.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="BudjetinTulostusKuuntelija.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="Main.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>

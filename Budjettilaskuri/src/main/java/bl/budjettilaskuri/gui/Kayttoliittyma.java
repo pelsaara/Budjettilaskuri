@@ -45,8 +45,7 @@ public class Kayttoliittyma implements Runnable {
 
     private void luoKomponentit(Container container) {
         container.add(luoTekstiKentat());
-        container.add(budjetinTulostusTiedostoon(), BorderLayout.SOUTH);
-        //container.add(luoBudjettiValikko(), BorderLayout.SOUTH);
+        container.add(luoBudjettiValikko(), BorderLayout.SOUTH);
     }
 
     private JPanel luoTekstiKentat() {
@@ -79,17 +78,17 @@ public class Kayttoliittyma implements Runnable {
         return panel;
     }
 
-    private JPanel budjetinTulostusTiedostoon() {
-        JPanel panel = new JPanel(new GridLayout(1, 2));
-        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-        JButton tulostusNappi = new JButton("Tulosta budjetti tiedostoon");
-        tulostusNappi.addActionListener(new BudjetinTulostusKuuntelija(this.tulostin, this.rahatilanne));
-        panel.add(tulostusNappi);
-        return panel;
-    }
+//    private JPanel budjetinTulostusTiedostoon() {
+//        JPanel panel = new JPanel(new GridLayout(1, 2));
+//        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+//        JButton tulostusNappi = new JButton("Tulosta budjetti tiedostoon");
+//        tulostusNappi.addActionListener(new BudjetinTulostusKuuntelija(this.tulostin, this.rahatilanne));
+//        panel.add(tulostusNappi);
+//        return panel;
+//    }
 
     private JPanel luoBudjettiValikko() {
-        JPanel panel = new JPanel(new GridLayout(2, 1));
+        JPanel panel = new JPanel(new GridLayout(3, 1));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         JButton budjettiNappi = new JButton("Laske Budjetti");
@@ -99,6 +98,9 @@ public class Kayttoliittyma implements Runnable {
 
         panel.add(budjettiNappi);
         panel.add(tekstiKentta);
+        JButton tulostusNappi = new JButton("Tulosta budjetti tiedostoon");
+        tulostusNappi.addActionListener(new BudjetinTulostusKuuntelija(this.tulostin, this.rahatilanne));
+        panel.add(tulostusNappi);
 
         return panel;
     }

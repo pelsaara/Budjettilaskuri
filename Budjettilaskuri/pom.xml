@@ -36,10 +36,14 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
-                        <param>bl.budjettilaskuri.logiikka.*</param>
+                        <param>bl.budjettilaskuri.logiikka.Tulostin</param>
+                        <param>bl.budjettilaskuri.logiikka.Laskuri</param>
+                        <param>bl.budjettilaskuri.budjetti.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>bl.budjettilaskuri.logiikka.*</param>
+                        <param>bl.budjettilaskuri.logiikka.Tulostin</param>
+                        <param>bl.budjettilaskuri.logiikka.Laskuri</param>
+                        <param>bl.budjettilaskuri.budjetti.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

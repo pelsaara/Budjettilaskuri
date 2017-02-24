@@ -50,7 +50,7 @@ public class Laskuri {
      * @return Tulojen ja menojen erotus jaettuna halutulla arvolla
      */
     public double laskeBudjetti(ArrayList<Rahatapahtuma> tulot, ArrayList<Rahatapahtuma> menot, int jakaja) {
-        if (jakaja < 0) {
+        if (jakaja <= 0) {
             return 0.0;
         }
         return (laskeTulojenJaMenojenErotus(tulot, menot) / (double) jakaja);
