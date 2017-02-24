@@ -6,7 +6,6 @@
 Mikäli tekstikentät eivät tyhjenneet jompaakumpaa nappia painettaessa, tarkistathan, että syötteesi olivat oikeanlaisia:
 Selite - max 25 merkkiä
 Summa - positiivinen kokonaisluku
-
 Mikäli kentät tyhjenivät, nappien alla oleviin tekstikenttiin päivittyy syöttämäsi tulo/meno. Voit tästä kentästä tarkastella lisäämiäsi tuloja ja menoja.
 
 4. Kun olet syöttänyt kaikki tulosi ja menosi, voit laskea budjettisi painamalla "Laske Budjetti"
