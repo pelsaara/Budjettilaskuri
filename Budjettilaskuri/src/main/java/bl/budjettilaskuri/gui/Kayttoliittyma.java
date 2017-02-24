@@ -9,12 +9,15 @@ import bl.budjettilaskuri.logiikka.Tulostin;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
@@ -33,67 +36,75 @@ public class Kayttoliittyma implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("Budjettilaskuri");
-        frame.setPreferredSize(new Dimension(600, 400));
+        frame.setPreferredSize(new Dimension(500, 500));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        luoKomponentit(frame.getContentPane());
+        luoLaskuri(frame.getContentPane());
 
         frame.pack();
         frame.setVisible(true);
     }
 
-    private void luoKomponentit(Container container) {
-        container.add(luoTekstiKentat());
-        container.add(luoBudjettiValikko(), BorderLayout.SOUTH);
-    }
+    private void luoLaskuri(Container paneeli) {
+        BoxLayout boxi = new BoxLayout(paneeli, BoxLayout.Y_AXIS);
+        paneeli.setLayout(boxi);
 
-    private JPanel luoTekstiKentat() {
-        JPanel panel = new JPanel(new GridLayout(4, 2));
-        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        JPanel tuloMenoPaneeli = new JPanel(new GridLayout(4, 2));
 
         JTextField seliteKentta = new JTextField();
+
         JTextField summaKentta = new JTextField();
 
-        panel.add(new JLabel("Selite: "));
-        panel.add(seliteKentta);
-        panel.add(new JLabel("Summa: "));
-        panel.add(summaKentta);
         JTextArea tulot = new JTextArea();
-        JTextArea menot = new JTextArea();
         tulot.setEditable(false);
+        tulot.setVisible(true);
+        JScrollPane scroll1 = new JScrollPane(tulot);
+
+        JTextArea menot = new JTextArea(12, 1);
         menot.setEditable(false);
+        menot.setVisible(true);
+        JScrollPane scroll2 = new JScrollPane(menot);
+
         JButton tulo = new JButton("Lisää tulo");
         tulo.addActionListener(new TulonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta, tulot, tulostin));
 
         JButton meno = new JButton("Lisää meno");
         meno.addActionListener(new MenonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta, menot, tulostin));
 
-        panel.add(tulo);
-        panel.add(meno);
+        tuloMenoPaneeli.add(new JLabel("Selite: "));
+        tuloMenoPaneeli.add(seliteKentta);
+        tuloMenoPaneeli.add(new JLabel("Summa: "));
+        tuloMenoPaneeli.add(summaKentta);
+        tuloMenoPaneeli.add(tulo);
+        tuloMenoPaneeli.add(meno);
+        JPanel tulostusTekstiPaneeli = new JPanel(new GridLayout(1, 2));
+        tulostusTekstiPaneeli.add(new JLabel("Tulot:"));
+        tulostusTekstiPaneeli.add(new JLabel("Menot:"));
+        JPanel tulostusPaneeli = new JPanel(new GridLayout(1, 2));
 
-        panel.add(tulot);
-        panel.add(menot);
+        tulostusPaneeli.add(scroll1);
+        tulostusPaneeli.add(scroll2);
 
-        return panel;
-    }
+        JTextArea budjettiKentta = new JTextArea(1, 3);
+        budjettiKentta.setEditable(false);
+        budjettiKentta.setVisible(true);
 
-    private JPanel luoBudjettiValikko() {
-        JPanel panel = new JPanel(new GridLayout(3, 1));
-        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-
+        JPanel budjettiPaneeli = new JPanel(new GridLayout(1, 2));
         JButton budjettiNappi = new JButton("Laske Budjetti");
-        JTextArea tekstiKentta = new JTextArea();
+        budjettiNappi.addActionListener(new BudjetinLaskuKuuntelija(this.rahatilanne, budjettiKentta, tulostin));
 
-        budjettiNappi.addActionListener(new BudjetinLaskuKuuntelija(this.rahatilanne, tekstiKentta, tulostin));
-
-        panel.add(budjettiNappi);
-        panel.add(tekstiKentta);
         JButton tulostusNappi = new JButton("Tulosta budjetti tiedostoon");
         tulostusNappi.addActionListener(new BudjetinTulostusKuuntelija(this.tulostin, this.rahatilanne));
-        panel.add(tulostusNappi);
+        budjettiPaneeli.add(budjettiNappi);
+        budjettiPaneeli.add(tulostusNappi);
 
-        return panel;
+        paneeli.add(tuloMenoPaneeli);
+        paneeli.add(tulostusTekstiPaneeli);
+        paneeli.add(tulostusPaneeli);
+        paneeli.add(budjettiPaneeli);
+        paneeli.add(budjettiKentta);
+
     }
 
     public JFrame getFrame() {

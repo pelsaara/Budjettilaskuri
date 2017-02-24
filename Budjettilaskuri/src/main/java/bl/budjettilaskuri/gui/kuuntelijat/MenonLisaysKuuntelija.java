@@ -27,7 +27,7 @@ public class MenonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
             rahatilanne.lisaaMeno(seliteKentta.getText(), summa);
             seliteKentta.setText("");
             summaKentta.setText("");
-            tapahtumaKentta.setText("Menot: \n" + tulostin.tulostaLista(rahatilanne.getMenot()));
+            tapahtumaKentta.setText(tulostin.tulostaLista(rahatilanne.getMenot()));
         }
 
     }

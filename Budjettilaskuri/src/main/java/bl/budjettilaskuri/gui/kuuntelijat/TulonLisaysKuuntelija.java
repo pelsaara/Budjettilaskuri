@@ -27,7 +27,7 @@ public class TulonLisaysKuuntelija extends RahatapahtumanLisaysKuuntelija {
             rahatilanne.lisaaTulo(seliteKentta.getText(), summa);
             seliteKentta.setText("");
             summaKentta.setText("");
-            tapahtumaKentta.setText("Tulot: \n" + tulostin.tulostaLista(rahatilanne.getTulot()));
+            tapahtumaKentta.setText(tulostin.tulostaLista(rahatilanne.getTulot()));
         }
 
     }
