@@ -8,7 +8,7 @@
 <div id="overview"><a href="../../../../../apidocs/bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">View Javadoc</a></div><pre>
 <a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> bl.budjettilaskuri.gui.kuuntelijat;
 <a class="jxr_linenumber" name="L2" href="#L2">2</a>   
-<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> bl.budjettilaskuri.logiikka.Rahatilanne;
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> bl.budjettilaskuri.budjetti.Rahatilanne;
 <a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> bl.budjettilaskuri.logiikka.Tulostin;
 <a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> java.awt.event.ActionEvent;
 <a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> javax.swing.JTextArea;
@@ -16,7 +16,7 @@
 <a class="jxr_linenumber" name="L8" href="#L8">8</a>   
 <a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">MenonLisaysKuuntelija</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/RahatapahtumanLisaysKuuntelija.html">RahatapahtumanLisaysKuuntelija</a> {
 <a class="jxr_linenumber" name="L10" href="#L10">10</a>  
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">MenonLisaysKuuntelija</a>(<a href="../../../../bl/budjettilaskuri/logiikka/Rahatilanne.html">Rahatilanne</a> rahatilanne, JTextField seliteKentta, JTextField summaKentta, JTextArea tapahtumaKentta, <a href="../../../../bl/budjettilaskuri/logiikka/Tulostin.html">Tulostin</a> tulostin) {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../bl/budjettilaskuri/gui/kuuntelijat/MenonLisaysKuuntelija.html">MenonLisaysKuuntelija</a>(<a href="../../../../bl/budjettilaskuri/budjetti/Rahatilanne.html">Rahatilanne</a> rahatilanne, JTextField seliteKentta, JTextField summaKentta, JTextArea tapahtumaKentta, <a href="../../../../bl/budjettilaskuri/logiikka/Tulostin.html">Tulostin</a> tulostin) {
 <a class="jxr_linenumber" name="L12" href="#L12">12</a>          <strong class="jxr_keyword">super</strong>(rahatilanne, seliteKentta, summaKentta, tapahtumaKentta, tulostin);
 <a class="jxr_linenumber" name="L13" href="#L13">13</a>      }
 <a class="jxr_linenumber" name="L14" href="#L14">14</a>  
@@ -30,12 +30,12 @@
 <a class="jxr_linenumber" name="L22" href="#L22">22</a>          } <strong class="jxr_keyword">catch</strong> (Exception e) {
 <a class="jxr_linenumber" name="L23" href="#L23">23</a>              System.out.println(e.getMessage());
 <a class="jxr_linenumber" name="L24" href="#L24">24</a>          }
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>          
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
 <a class="jxr_linenumber" name="L26" href="#L26">26</a>          <strong class="jxr_keyword">if</strong> (summa &gt; 0 &amp;&amp; selite.length() &lt;= 26 &amp;&amp; selite.length() &gt; 0) {
 <a class="jxr_linenumber" name="L27" href="#L27">27</a>              rahatilanne.lisaaMeno(seliteKentta.getText(), summa);
 <a class="jxr_linenumber" name="L28" href="#L28">28</a>              seliteKentta.setText(<span class="jxr_string">""</span>);
 <a class="jxr_linenumber" name="L29" href="#L29">29</a>              summaKentta.setText(<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>              tapahtumaKentta.setText(<span class="jxr_string">"Menot: \n"</span> + tulostin.tulostaLista(rahatilanne.getMenot()));
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>              tapahtumaKentta.setText(tulostin.tulostaLista(rahatilanne.getMenot()));
 <a class="jxr_linenumber" name="L31" href="#L31">31</a>          }
 <a class="jxr_linenumber" name="L32" href="#L32">32</a>  
 <a class="jxr_linenumber" name="L33" href="#L33">33</a>      }
