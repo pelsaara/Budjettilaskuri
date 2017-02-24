@@ -25,7 +25,7 @@ public class TulostinTest {
     }
 
     @Test
-    public void tulostaRahatilanneToimii() {
+    public void tulostaTulotJaMenotToimii() {
         String tuloste = "Tulot: \ntuki: 500\n\nMenot: \nvuokra: 800\n";
         assertEquals(tuloste, tulostin.tulostaTulotJaMenot(tilanne));
     }
@@ -35,5 +35,15 @@ public class TulostinTest {
         tilanne.lisaaTulo("palkka", 600);
         String tuloste = "Kuukausibudjetti: 300,00\nViikkobudjetti: 75,00\nPäiväbudjetti: 10,00";
         assertEquals(tuloste, tulostin.tulostaBudjetti(tilanne));
+    }
+    
+    @Test 
+    public void tulostaRahatilanneToimii() {
+        tilanne.lisaaTulo("palkka", 600);
+        String tuloste = "";
+        tuloste = "Tulot: \ntuki: 500\npalkka: 600\n\nMenot: \nvuokra: 800\n";
+        tuloste += "\n\n";
+        tuloste += "Kuukausibudjetti: 300,00\nViikkobudjetti: 75,00\nPäiväbudjetti: 10,00";
+        assertEquals(tuloste, tulostin.tulostaRahatilanne(tilanne));
     }
 }

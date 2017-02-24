@@ -22,8 +22,8 @@ import javax.swing.WindowConstants;
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
-    private Rahatilanne rahatilanne;
-    private Tulostin tulostin;
+    private final Rahatilanne rahatilanne;
+    private final Tulostin tulostin;
 
     public Kayttoliittyma(Rahatilanne rahatilanne) {
         this.rahatilanne = rahatilanne;
@@ -72,15 +72,15 @@ public class Kayttoliittyma implements Runnable {
 
         panel.add(tulo);
         panel.add(meno);
-        
+
         panel.add(tulot);
         panel.add(menot);
 
         return panel;
     }
-    
-    private JPanel budjetinTulostusTiedostoon(){
-        JPanel panel = new JPanel(new GridLayout(1,2));
+
+    private JPanel budjetinTulostusTiedostoon() {
+        JPanel panel = new JPanel(new GridLayout(1, 2));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         JButton tulostusNappi = new JButton("Tulosta budjetti tiedostoon");
         tulostusNappi.addActionListener(new BudjetinTulostusKuuntelija(this.tulostin, this.rahatilanne));

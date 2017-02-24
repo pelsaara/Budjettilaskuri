@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package bl.budjettilaskuri.logiikka;
 
 import bl.budjettilaskuri.budjetti.Rahatilanne;
@@ -11,12 +6,22 @@ import java.io.File;
 import java.io.FileWriter;
 
 /**
- *
- * @author pelsaara
+ * Luokka tulostaa halutut tiedot tiedostoon.
  */
 public class TiedostoTulostin {
 
-    public File tulostaTiedosto(String polku, Tulostin tulostin, Rahatilanne rt) {
+    /**
+     * Metodi luo tiedoston, johon halutun rahatilanteen tiedot tulostetaan.
+     *
+     * @param polku Tiedoston haluttu polku (sijainti ja nimi) tallennusta
+     * varten
+     * @param tulostin Tulostin-luokan olio jonka metodilla muodostetaan
+     * tiedostoon kirjoitettava teksti
+     * @param rt Rahatilanne, jonka tiedot halutaan tulostaa
+     *
+     * @return File-tyyppinen muuttuja, johon kirjoitettu rahatilanne.
+     */
+    public File tulostaRahatilanneTiedostoon(String polku, Tulostin tulostin, Rahatilanne rt) {
         BufferedWriter kirjoitin = null;
         try {
             File tiedosto = new File(polku);

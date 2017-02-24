@@ -10,9 +10,9 @@ import javax.swing.*;
 
 public class BudjetinTulostusKuuntelija implements ActionListener {
 
-    private Tulostin tulostin;
-    private TiedostoTulostin tiedostoTulostin;
-    private Rahatilanne r;
+    private final Tulostin tulostin;
+    private final TiedostoTulostin tiedostoTulostin;
+    private final Rahatilanne r;
 
     public BudjetinTulostusKuuntelija(Tulostin t, Rahatilanne r) {
         this.tulostin = t;
@@ -28,11 +28,11 @@ public class BudjetinTulostusKuuntelija implements ActionListener {
         tiedostonValitsin.setDialogTitle("Tallenna tekstitiedosto");
 
         int userSelection = tiedostonValitsin.showSaveDialog(parentFrame);
-        
+
         if (userSelection == JFileChooser.APPROVE_OPTION) {
             File bTiedosto;
             String polku = tiedostonValitsin.getSelectedFile().getAbsolutePath();
-            bTiedosto = tiedostoTulostin.tulostaTiedosto(polku, tulostin, r);
+            bTiedosto = tiedostoTulostin.tulostaRahatilanneTiedostoon(polku, tulostin, r);
         }
     }
 
