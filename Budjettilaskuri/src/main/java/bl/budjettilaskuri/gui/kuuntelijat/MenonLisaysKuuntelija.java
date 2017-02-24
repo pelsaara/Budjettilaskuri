@@ -1,6 +1,6 @@
 package bl.budjettilaskuri.gui.kuuntelijat;
 
-import bl.budjettilaskuri.logiikka.Rahatilanne;
+import bl.budjettilaskuri.budjetti.Rahatilanne;
 import bl.budjettilaskuri.logiikka.Tulostin;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;

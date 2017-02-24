@@ -1,6 +1,7 @@
 package bl.budjettilaskuri.logiikka;
 
 
+import bl.budjettilaskuri.budjetti.Rahatapahtuma;
 import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;

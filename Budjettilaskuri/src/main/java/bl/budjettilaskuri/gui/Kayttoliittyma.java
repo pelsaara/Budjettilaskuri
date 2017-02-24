@@ -3,7 +3,8 @@ package bl.budjettilaskuri.gui;
 import bl.budjettilaskuri.gui.kuuntelijat.BudjetinLaskuKuuntelija;
 import bl.budjettilaskuri.gui.kuuntelijat.MenonLisaysKuuntelija;
 import bl.budjettilaskuri.gui.kuuntelijat.TulonLisaysKuuntelija;
-import bl.budjettilaskuri.logiikka.Rahatilanne;
+import bl.budjettilaskuri.budjetti.Rahatilanne;
+import bl.budjettilaskuri.gui.kuuntelijat.BudjetinTulostusKuuntelija;
 import bl.budjettilaskuri.logiikka.Tulostin;
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -44,7 +45,8 @@ public class Kayttoliittyma implements Runnable {
 
     private void luoKomponentit(Container container) {
         container.add(luoTekstiKentat());
-        container.add(luoBudjettiValikko(), BorderLayout.SOUTH);
+        container.add(budjetinTulostusTiedostoon(), BorderLayout.SOUTH);
+        //container.add(luoBudjettiValikko(), BorderLayout.SOUTH);
     }
 
     private JPanel luoTekstiKentat() {
@@ -60,7 +62,8 @@ public class Kayttoliittyma implements Runnable {
         panel.add(summaKentta);
         JTextArea tulot = new JTextArea();
         JTextArea menot = new JTextArea();
-
+        tulot.setEditable(false);
+        menot.setEditable(false);
         JButton tulo = new JButton("Lisää tulo");
         tulo.addActionListener(new TulonLisaysKuuntelija(rahatilanne, seliteKentta, summaKentta, tulot, tulostin));
 
@@ -76,13 +79,12 @@ public class Kayttoliittyma implements Runnable {
         return panel;
     }
     
-    private JPanel BudjetinTulostus(){
+    private JPanel budjetinTulostusTiedostoon(){
         JPanel panel = new JPanel(new GridLayout(1,2));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-        JTextArea tulot = new JTextArea();
-        JTextArea menot = new JTextArea();
-        panel.add(tulot);
-        panel.add(menot);
+        JButton tulostusNappi = new JButton("Tulosta budjetti tiedostoon");
+        tulostusNappi.addActionListener(new BudjetinTulostusKuuntelija(this.tulostin, this.rahatilanne));
+        panel.add(tulostusNappi);
         return panel;
     }
 

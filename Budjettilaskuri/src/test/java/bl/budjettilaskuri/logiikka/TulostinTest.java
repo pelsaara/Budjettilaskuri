@@ -1,5 +1,6 @@
 package bl.budjettilaskuri.logiikka;
 
+import bl.budjettilaskuri.budjetti.Rahatilanne;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +27,7 @@ public class TulostinTest {
     @Test
     public void tulostaRahatilanneToimii() {
         String tuloste = "Tulot: \ntuki: 500\n\nMenot: \nvuokra: 800\n";
-        assertEquals(tuloste, tulostin.tulostaRahatilanne(tilanne));
+        assertEquals(tuloste, tulostin.tulostaTulotJaMenot(tilanne));
     }
     
     @Test 

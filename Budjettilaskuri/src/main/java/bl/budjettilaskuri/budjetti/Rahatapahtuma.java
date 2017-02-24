@@ -1,4 +1,4 @@
-package bl.budjettilaskuri.logiikka;
+package bl.budjettilaskuri.budjetti;
 
 /**
  * Luokka kuvaa rahatapahtuma-oliota, jolla on (euro)määrä ja selite.

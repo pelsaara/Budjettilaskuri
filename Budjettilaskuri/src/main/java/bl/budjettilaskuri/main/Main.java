@@ -1,8 +1,8 @@
 package bl.budjettilaskuri.main;
 
 import bl.budjettilaskuri.gui.Kayttoliittyma;
-import bl.budjettilaskuri.logiikka.Rahatapahtuma;
-import bl.budjettilaskuri.logiikka.Rahatilanne;
+import bl.budjettilaskuri.budjetti.Rahatapahtuma;
+import bl.budjettilaskuri.budjetti.Rahatilanne;
 import bl.budjettilaskuri.logiikka.Tulostin;
 import javax.swing.SwingUtilities;
 
@@ -25,7 +25,7 @@ public class Main {
         System.out.println("Päivän budjetti on: " + r.laskePaivaBudjetti());
         System.out.println("");
         Tulostin tulostin = new Tulostin();
-        System.out.println(tulostin.tulostaRahatilanne(r));
+        System.out.println(tulostin.tulostaTulotJaMenot(r));
         System.out.println("");
 
         String nimi = "vuokra";
@@ -35,7 +35,7 @@ public class Main {
         
         //Graafinen käyttöliittymä
         Rahatilanne uusi = new Rahatilanne();
-        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(uusi);
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(r);
         SwingUtilities.invokeLater(kayttoliittyma);
         
 

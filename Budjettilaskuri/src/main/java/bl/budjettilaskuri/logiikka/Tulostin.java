@@ -1,5 +1,7 @@
 package bl.budjettilaskuri.logiikka;
 
+import bl.budjettilaskuri.budjetti.Rahatilanne;
+import bl.budjettilaskuri.budjetti.Rahatapahtuma;
 import java.util.ArrayList;
 
 /**
@@ -31,7 +33,7 @@ public class Tulostin {
      *
      * @return Listojen alkiot sisältävä tulostettava String
      */
-    public String tulostaRahatilanne(Rahatilanne rt) {
+    public String tulostaTulotJaMenot(Rahatilanne rt) {
         String tulostus = "";
         tulostus += ("Tulot: \n");
         tulostus += tulostaLista(rt.getTulot());
@@ -54,6 +56,14 @@ public class Tulostin {
         tulostus += ("Kuukausibudjetti: " + String.format("%.2f", rt.laskeKuukausiBudjetti()));
         tulostus += ("\nViikkobudjetti: " + String.format("%.2f", rt.laskeViikkoBudjetti()));
         tulostus += ("\nPäiväbudjetti: " + String.format("%.2f", rt.laskePaivaBudjetti()));
+        return tulostus;
+    }
+    
+    public String tulostaRahatilanne(Rahatilanne rt){
+        String tulostus="";
+        tulostus += tulostaTulotJaMenot(rt);
+        tulostus += "\n\n";
+        tulostus += tulostaBudjetti(rt);
         return tulostus;
     }
 }

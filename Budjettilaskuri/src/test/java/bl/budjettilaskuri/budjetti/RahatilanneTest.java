@@ -1,5 +1,6 @@
-package bl.budjettilaskuri.logiikka;
+package bl.budjettilaskuri.budjetti;
 
+import bl.budjettilaskuri.budjetti.Rahatilanne;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
