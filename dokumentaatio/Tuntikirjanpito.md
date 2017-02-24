@@ -16,4 +16,4 @@ Päivä | Tunnit | Kuvaus
 14.02.2017 | 2h | Jatkokehitystä, Tulostin-luokka käyttöön käyttöliittymään
 14.02.2017 | 1h | Hienosäätöä, PDF-kirjastoihin tutustumista
 14.02.2017 | 4h | Sekvenssikaaviot, ohjelman kehitystä, tutustuminen .txt-tiedostojen kirjoittamiseen, raportit
-24.02.2017 | 7h | Viikko 6: uusi graafinen käyttöliittymä, uusi tiedostontulostus-ominaisuus, rakennekuvaus, käyttöohjeet, raportit, ajettava jar-tiedosto
+24.02.2017 | 7h | Viikko 6: uusi graafinen käyttöliittymä, uusi tiedostontulostus-ominaisuus, rakennekuvaus, käyttöohjeet, raportit, ajettava jar-tiedosto, uusi luokkakaavio
