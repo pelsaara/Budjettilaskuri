@@ -3,17 +3,20 @@ Budjettilaskuri, jonka perusideana on laskea syötettyjen tulojen ja menojen jä
 
 Sovellukseen syötetään tekstikenttiin kuukausittaiset tulot, kuten palkka ja kuukausittaiset menot, kuten matkakortin hinta, vakuutukset, sähkölasku, ruoka, bensiini jne. Sovellus laskee kuinka paljon rahaa merkittyjen menojen jälkeen jää, ja näyttää jäljelle jäävän kuukausittaisen, viikottaisen ja päivittäisen käyttöraha-budjetin. Sovellukseen voi myös esimerkiksi syöttää paljonko tahtoisi saada säästöön joka kuukausi, ja tämä huomioidaan laskuissa. 
 
-Sovellus myös graafisesti esittää, miten menot jakautuvat. Esimerkiksi ruoan osuuden menoista voisi suhteuttaa visuaalisesti alkoholimenoihin, mikäli ne ovat merkitty. Tämän lisäksi sovellus tarjoaisi mahdollisuuden tallentaa laskemat tiedostoon ja täten tulostaa ne myöhäisempää tarkastelua varten.
+Sovellus myös tarjoaa mahdollisuuden tallentaa budjettilaskemat tiedostoon ja täten tulostaa ne myöhäisempää tarkastelua varten.
 
 **Käyttäjä:** Kuka tahansa, joka tahtoo laskea budjettinsa 
 
 **Käyttäjän toiminnot:**
 * Menojen ja tulojen syöttäminen
 * Kuukausi-, viikko- ja päiväbudjetin laskenta
-* Graafisten esitysten tarkastelu
-* Budjetin tietojen tulostus
+* Budjetin tietojen tulostus .txt-tiedostoon
 
 # Rakenne
+**Rakennekuvaus** 
+Ohjelma rakentuu kolmeen pakettiin: budjetti, logiikka ja gui. Gui-paketti sisältää graafisen käyttöliittymän. Lisäksi gui-paketin alla on paketti gui.kuuntelijat, joka sisältää graafisen käyttöliittymän eri JButtonien ActionListenerit. Luotaessaan graafinen käyttöliittymä tarvitsee parametrikseen Rahatilanteen. 
+  Rahatilanne sijaistee budjetti-paketissa. Rahatilanteella on Laskuri, jonka lisäksi Rahatilanteeseen liittyy nollasta useaan Rahatapahtumaa. Rahatapahtumat talletetaan Rahatilanteessa kahteen ArrayListiin, tuloihin ja menoihin. Rahatapahtuma sisältyy myös budjetti-pakettiin. Rahatapahtumalla on string-muotoinen selite ja int-muotoinen määrä. 
+  Logiikka-pakettiin sisältyvät jo aiemmin mainittu Laskuri, TiedostoTulostin ja Tulostin. Graafisella käyttöliittymällä on Tulostin, jota se antaa kuuntelijoilleen. Käytettäessä Tulostimelle annetaan Rahatilanne, jota Tulostin käyttää tulostaessaan Rahatilanteen eri komponentteja. Käyttöliittymä käyttää myös TiedostoTulostin-luokkaa, joka saa metodinsa parametrina sekä Tulostin-olion, että Rahatilanteen. 
 
 **Luokkakaavio**
 
