@@ -21,12 +21,11 @@ public abstract class RahatapahtumanLisaysKuuntelija implements ActionListener {
         this.summaKentta = summaKentta;
         this.tapahtumaKentta = tapahtumaKentta;
         this.tulostin = tulostin;
-        
+
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        
 
     }
 

@@ -5,7 +5,6 @@ import bl.budjettilaskuri.logiikka.TiedostoTulostin;
 import bl.budjettilaskuri.logiikka.Tulostin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import javax.swing.*;
 
 public class BudjetinTulostusKuuntelija implements ActionListener {
@@ -30,9 +29,8 @@ public class BudjetinTulostusKuuntelija implements ActionListener {
         int userSelection = tiedostonValitsin.showSaveDialog(parentFrame);
 
         if (userSelection == JFileChooser.APPROVE_OPTION) {
-            File bTiedosto;
             String polku = tiedostonValitsin.getSelectedFile().getAbsolutePath();
-            bTiedosto = tiedostoTulostin.tulostaRahatilanneTiedostoon(polku, tulostin, r);
+            tiedostoTulostin.tulostaRahatilanneTiedostoon(polku, tulostin, r);
         }
     }
 

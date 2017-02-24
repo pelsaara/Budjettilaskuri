@@ -6,12 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
 
-
 public class BudjetinLaskuKuuntelija implements ActionListener {
 
-    private Rahatilanne rahatilanne;
-    private JTextArea tekstiKentta;
-    private Tulostin tulostin;
+    private final Rahatilanne rahatilanne;
+    private final JTextArea tekstiKentta;
+    private final Tulostin tulostin;
 
     public BudjetinLaskuKuuntelija(Rahatilanne rahatilanne, JTextArea tekstikentta, Tulostin tulostin) {
         this.rahatilanne = rahatilanne;
@@ -22,7 +21,6 @@ public class BudjetinLaskuKuuntelija implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         this.tekstiKentta.setText(tulostin.tulostaBudjetti(rahatilanne));
-        
 
     }
 

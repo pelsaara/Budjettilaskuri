@@ -1,6 +1,5 @@
 package bl.budjettilaskuri.budjetti;
 
-import bl.budjettilaskuri.budjetti.Rahatapahtuma;
 import bl.budjettilaskuri.logiikka.Laskuri;
 import java.util.ArrayList;
 

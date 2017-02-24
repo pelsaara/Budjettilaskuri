@@ -1,9 +1,7 @@
 package bl.budjettilaskuri.main;
 
 import bl.budjettilaskuri.gui.Kayttoliittyma;
-import bl.budjettilaskuri.budjetti.Rahatapahtuma;
 import bl.budjettilaskuri.budjetti.Rahatilanne;
-import bl.budjettilaskuri.logiikka.Tulostin;
 import javax.swing.SwingUtilities;
 
 public class Main {
@@ -20,24 +18,9 @@ public class Main {
         r.lisaaMeno("Bussikortti", 39);
         r.lisaaMeno("puhelinlasku", 22);
 
-        System.out.println("Kuukauden budjetti on: " + r.laskeKuukausiBudjetti());
-        System.out.println("Viikon budjetti on: " + r.laskeViikkoBudjetti());
-        System.out.println("Päivän budjetti on: " + r.laskePaivaBudjetti());
-        System.out.println("");
-        Tulostin tulostin = new Tulostin();
-        System.out.println(tulostin.tulostaTulotJaMenot(r));
-        System.out.println("");
-
-        String nimi = "vuokra";
-        int maara = 850;
-        Rahatapahtuma raha = new Rahatapahtuma(nimi, maara);
-        System.out.println(raha);
-        
         //Graafinen käyttöliittymä
-        Rahatilanne uusi = new Rahatilanne();
-        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(r);
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(new Rahatilanne());
         SwingUtilities.invokeLater(kayttoliittyma);
-        
 
     }
 
