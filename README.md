@@ -10,5 +10,6 @@ Budjettilaskuri, joka laskee syötettyjen tulojen ja menojen jälkeen, kuinka pa
 - [Käyttöohjeet](dokumentaatio/Kayttoohjeet.md)
 - [pit-raportti](https://htmlpreview.github.io/?https://github.com/pelsaara/Budjettilaskuri/blob/master/dokumentaatio/pit/201702242125/index.html)
 - [Checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/pelsaara/Budjettilaskuri/blob/master/dokumentaatio/checkstyle/checkstyle.html)
+- [Javadoc](https://htmlpreview.github.io/?https://github.com/pelsaara/Budjettilaskuri/blob/master/javadoc/index.html)
 
 
